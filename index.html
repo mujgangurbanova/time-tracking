@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <main>
+      <section class="wrapper">
+        <div class="person-profile">
+          <div class="person-information flex">
+            <div class="profile-picture">
+              <img src="images/image-jeremy.png" alt="Jeremy Robson" />
+            </div>
+            <div class="text">
+              <p class="report-paragraph">Report for</p>
+              <h1 class="user-name">Jeremy Robson</h1>
+            </div>
+          </div>
+          <ul class="person-schedule flex">
+            <li class="person-schedule-items active" data-id="daily">Daily</li>
+            <li class="person-schedule-items" data-id="weekly">
+              Weekly
+            </li>
+            <li class="person-schedule-items" data-id="monthly">Monthly</li>
+          </ul>
+        </div>
+        <div class="activity"></div>
+      </section>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

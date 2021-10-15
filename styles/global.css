@@ -1,0 +1,57 @@
+:root {
+    --main-color: hsl(246, 80%, 60%);
+    --orange: hsl(15, 100%, 70%);
+    --blue: hsl(195, 74%, 62%);
+    --red: hsl(348, 100%, 68%);
+    --green: hsl(145, 58%, 55%);
+    --purple: hsl(264, 64%, 52%);
+    --yellow: hsl(43, 84%, 65%);
+    --neutral-darker: hsl(226, 43%, 10%);
+    --neutral-dark: hsl(235, 46%, 20%);
+    --neutral-light: hsl(235, 45%, 30%);
+    --neutral-lighter: hsl(236, 100%, 87%);
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1 {
+    line-height: 1.25;
+}
+
+
+
+body {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--neutral-darker);
+    min-height: 100vh;
+}

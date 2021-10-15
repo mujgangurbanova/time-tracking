@@ -1,0 +1,254 @@
+@import url(./global.css);
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  max-width: 80rem;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.person-profile {
+  background-color: var(--neutral-dark);
+  border-radius: 20px;
+  color: white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper .activity {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+}
+
+
+
+.person-information {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  gap: 10px;
+  padding: 1.5rem;
+}
+
+.profile-picture {
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  max-width: 30%;
+}
+
+
+.text .report-paragraph {
+  color: var(--neutral-lighter);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.text .user-name {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.person-schedule {
+  color: var(--neutral-lighter);
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+}
+
+.person-schedule-items {
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.person-schedule-items:not(.active):hover,
+.person-schedule-items:not(.active):focus {
+  color: white;
+}
+
+.active {
+  color: white;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-card {
+  position: relative;
+  height: 150px;
+  min-height: auto;
+  background-image: url('../images/icon-work.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: var(--orange);
+  background-blend-mode: multiply;
+  padding: 50px 20px;
+  border-radius: 15px;
+}
+
+.activity-card:nth-child(2) {
+  background-image: url('../images/icon-play.svg');
+  background-color: var(--blue);
+}
+.activity-card:nth-child(3) {
+  background-image: url('../images/icon-study.svg');
+  background-color: var(--red);
+}
+.activity-card:nth-child(4) {
+  background-image: url('../images/icon-exercise.svg');
+  background-color: var(--green);
+}
+.activity-card:nth-child(5) {
+  background-image: url('../images/icon-social.svg');
+  background-color: var(--purple);
+}
+.activity-card:nth-child(6) {
+  background-image: url('../images/icon-self-care.svg');
+  background-color: var(--yellow);
+}
+
+.activity-card .info {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--neutral-dark);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.activity-card .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.title p {
+  color: #fff;
+}
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description h2,
+.description p {
+  color: #fff;
+}
+.description h2 {
+  font-size: 30px;
+}
+.description p {
+  font-size: 14px;
+}
+.activity-card .active {
+  opacity: 1;
+}
+
+.activity-card:hover .info{
+  background-color: var(--neutral-light);
+}
+
+ .dots {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.dot {
+  background-color: #bdc1ff;
+  border-radius: 50%;
+  height: 4px;
+  margin: 2px;
+  width: 4px;
+  z-index: 99;
+}
+
+ .dots:hover .dot {
+  background-color: white;
+}
+
+
+/* media queries */
+@media screen and (min-width: 650px) {
+  .wrapper .activity {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+  
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    left: 50%;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .wrapper .activity {
+    grid-column: 4/13;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0;
+  }
+
+  .person-profile {
+    grid-column: 1/4;
+  }
+
+  .profile-picture {
+    margin-bottom: 15px;
+    max-width: 40%;
+  }
+
+  .person-information {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+
+  .text .user-name {
+    font-size: 36px;
+  }
+
+  .person-schedule {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .activity-card {
+    height: auto;
+  }
+  .description {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .description h2 {
+    margin-bottom: 10px;
+  }
+
+  
+}
+
+
+
